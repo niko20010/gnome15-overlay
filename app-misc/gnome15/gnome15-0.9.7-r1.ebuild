@@ -19,6 +19,7 @@ IUSE="alsa ayatana debug cairo evo g15 g19 g930 gnome google gstreamer
 
 ### in development:
 #networkmanager nexuiz webkit
+USE_EXPAND="GNOME15_DRIVERS"
 
 GNOME15_DRIVERS="lg4l g15 g19 g930"
 
