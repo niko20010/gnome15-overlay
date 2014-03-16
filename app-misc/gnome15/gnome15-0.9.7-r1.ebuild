@@ -20,6 +20,9 @@ IUSE="alsa ayatana debug cairo evo g15 g19 g930 gnome google gstreamer
 ### in development:
 #networkmanager nexuiz webkit
 
+GNOME15_DRIVERS="lg4l g15 g19 g930"
+
+
 OBSOLETE_PACKAGES="\
 	!dev-python/pylibg19
 	!app-misc/gnome15-core
@@ -98,10 +101,10 @@ src_configure() {
 ### post them at https://github.com/CMoH/gnome15-overlay
 
 	DRIVERS="\
-		$(use_enable lg4l-module driver-kernel) \
-		$(use_enable g15         driver-g15direct) \
-		$(use_enable g19         driver-g19direct) \
-		$(use_enable g930        driver-g930) \
+		$(use_enable gnome15_drivers_lg4l driver-kernel) \
+		$(use_enable gnome15_drivers_g15         driver-g15direct) \
+		$(use_enable gnome15_drivers_g19         driver-g19direct) \
+		$(use_enable gnome15_drivers_g930        driver-g930) \
 	"
 
 	PLUGINS="\
